@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class Demande_creation {
 	@Id
 	@GeneratedValue
-	private int id_demandec;
+	private Long id_demandec;
 	
 	private String nom_prenom;
 	private String password;
@@ -22,7 +22,7 @@ public class Demande_creation {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Demande_creation(int id_demandec, String nom_prenom, String password, String adresse_client) {
+	public Demande_creation(Long id_demandec, String nom_prenom, String password, String adresse_client) {
 		super();
 		this.id_demandec = id_demandec;
 		this.nom_prenom = nom_prenom;
@@ -30,10 +30,10 @@ public class Demande_creation {
 		this.adresse_client = adresse_client;
 	}
 
-	public int getId_demandec() {
+	public Long getId_demandec() {
 		return id_demandec;
 	}
-	public void setId_demandec(int id_demandec) {
+	public void setId_demandec(Long id_demandec) {
 		this.id_demandec = id_demandec;
 	}
 	public String getNom_prenom() {

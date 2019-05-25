@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean id="administrateurDao" class="com.ilyas.ben.dao.impl.AdministrateurDaoImpl" />
+		<bean id="administrateurService" class="com.ilyas.ben.services.impl.AdministrateurServiceImpl">
+			<property name="dao" ref="administrateurDao"></property>
+		</bean>
+		
+	  <bean id="clientDao" class="com.ilyas.ben.dao.impl.ClientDaoImpl" />
+		<bean id="clientService" class="com.ilyas.ben.services.impl.ClientServiceImpl">
+			<property name="dao" ref="clientDao"></property> 
+		</bean> 
+		
+		<bean id="demande_creationDao" class="com.ilyas.ben.dao.impl.Demande_creationDaoImpl" />
+		<bean id="demande_creationService" class="com.ilyas.ben.services.impl.Demande_creationServiceImpl">
+			<property name="dao" ref="demande_creationDao"></property>
+		</bean>
+		
+		<bean id="demande_modificationDao" class="com.ilyas.ben.dao.impl.Demande_modificationDaoImpl" />
+		<bean id="demande_modificationService" class="com.ilyas.ben.services.impl.Demande_modificationServiceImpl">
+			<property name="dao" ref="demande_modificationDao"></property>
+		</bean>
+		
+		<bean id="documentDao" class="com.ilyas.ben.dao.impl.DocumentDaoImpl" />
+		<bean id="documentService" class="com.ilyas.ben.services.impl.DocumentServiceImpl">
+			<property name="dao" ref="documentDao"></property> 
+		</bean> 
+</beans>

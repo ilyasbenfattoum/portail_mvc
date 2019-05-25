@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class Client extends Personne implements Serializable{
 	@Id
 	@GeneratedValue
-	private int id_client;
+	private Long id_client;
 	
 	private String adresse_client;
 	
@@ -29,7 +29,7 @@ public class Client extends Personne implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Client(int id_client, String nom_prenom, String password, String adresse_client) {
+	public Client(Long id_client, String nom_prenom, String password, String adresse_client) {
 		super(nom_prenom, password);
 		this.id_client = id_client;
 		this.adresse_client = adresse_client;
@@ -43,11 +43,11 @@ public class Client extends Personne implements Serializable{
 		this.adresse_client = adresse_client;
 	}
 
-	public int getId_client() {
+	public Long getId_client() {
 		return id_client;
 	}
 
-	public void setId_client(int id_client) {
+	public void setId_client(Long id_client) {
 		this.id_client = id_client;
 	}
 }

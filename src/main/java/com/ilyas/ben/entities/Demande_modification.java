@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class Demande_modification {
 	@Id
 	@GeneratedValue
-	private int id_demandem;
+	private Long id_demandem;
 	
 	private String nom_prenom;
 	private String password;
@@ -23,7 +23,7 @@ public class Demande_modification {
 	}
 	
 	
-	public Demande_modification(int id_demandem, String nom_prenom, String password, String adresse_client) {
+	public Demande_modification(Long id_demandem, String nom_prenom, String password, String adresse_client) {
 		super();
 		this.id_demandem = id_demandem;
 		this.nom_prenom = nom_prenom;
@@ -32,10 +32,10 @@ public class Demande_modification {
 	}
 
 
-	public int getId_demandem() {
+	public Long getId_demandem() {
 		return id_demandem;
 	}
-	public void setId_demandem(int id_demandem) {
+	public void setId_demandem(Long id_demandem) {
 		this.id_demandem = id_demandem;
 	}
 	public String getNom_prenom() {

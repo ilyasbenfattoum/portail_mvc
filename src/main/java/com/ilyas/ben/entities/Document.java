@@ -12,15 +12,15 @@ import javax.persistence.Table;
 public class Document implements Serializable{
 	@Id
 	@GeneratedValue
-	private int id_document;
+	private Long id_document;
 	
 	private String description;
 
-	public int getId_document() {
+	public Long getId_document() {
 		return id_document;
 	}
 
-	public void setId_document(int id_document) {
+	public void setId_document(Long id_document) {
 		this.id_document = id_document;
 	}
 
