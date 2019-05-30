@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 
@@ -12,11 +12,11 @@
   <title>D3C - Login</title>
 
   <!-- Custom fonts for this template-->
-  <link href="<%=request.getContextPath() %>/resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="<%=request.getContextPath() %>/resources/clientresources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="<%=request.getContextPath() %>/resources/css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="<%=request.getContextPath() %>/resources/clientresources/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -34,7 +34,7 @@
             <!-- Nested Row within Card Body -->
             <div class="row">
               <div class="col-lg-6 d-none d-lg-block bg-login-image">
-			  <img src="<%=request.getContextPath() %>/resources/img\michelin-man.png" alt="Image" class="img-fluid">
+			  <img src="<%=request.getContextPath() %>/resources/clientresources/img\michelin-man.png" alt="Image" class="img-fluid">
 			  </div>
 		<!--	  <img src="michelin-man.png" alt="Image" class="img-fluid">       -->
               <div class="col-lg-6">
@@ -52,7 +52,7 @@
                     <div class="form-group">
                      
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
+                    <a href="<%=request.getContextPath() %>/index/" class="btn btn-primary btn-user btn-block">
                       Login
                     </a>
                     <hr>
@@ -60,10 +60,10 @@
                   </form>
                   <hr>
                   <div class="text-center">
-                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                    <a class="small" href="<%=request.getContextPath() %>/forgot-password/">Forgot Password?</a>
                   </div>
                   <div class="text-center">
-                    <a class="small" href="register.html">Create an Account!</a>
+                    <a class="small" href="<%=request.getContextPath() %>/register/">Create an Account!</a>
                   </div>
                 </div>
               </div>
@@ -78,14 +78,14 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="<%=request.getContextPath() %>/resources/vendor/jquery/jquery.min.js"></script>
-  <script src="<%=request.getContextPath() %>/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<%=request.getContextPath() %>/resources/clientresources/vendor/jquery/jquery.min.js"></script>
+  <script src="<%=request.getContextPath() %>/resources/clientresources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="<%=request.getContextPath() %>/resources/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="<%=request.getContextPath() %>/resources/clientresources/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="<%=request.getContextPath() %>/resources/js/sb-admin-2.min.js"></script>
+  <script src="<%=request.getContextPath() %>/resources/clientresources/js/sb-admin-2.min.js"></script>
 
 </body>
 
