@@ -30,8 +30,16 @@ public class Administrateur extends Personne implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Administrateur( Long id_admin, String nom_prenom, String password, String adresse_admin) {
-		super(nom_prenom, password);
+	public List<Demande_creation> getDemande_creation() {
+		return demande_creation;
+	}
+
+	public List<Demande_modification> getDemande_modification() {
+		return demande_modification;
+	}
+
+	public Administrateur( Long id_admin, String nom_prenom, String password,String email, String adresse_admin) {
+		super(nom_prenom, password,email);
 		this.id_admin = id_admin;
 		this.adresse_admin = adresse_admin;
 	}

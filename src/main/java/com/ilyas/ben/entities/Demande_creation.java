@@ -15,8 +15,35 @@ public class Demande_creation {
 	private String nom_prenom;
 	private String password;
 	private String adresse_client;
+	private String email;
+	private String pays;
+	private String ville;
 	
 	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPays() {
+		return pays;
+	}
+
+	public void setPays(String pays) {
+		this.pays = pays;
+	}
+
+	public String getVille() {
+		return ville;
+	}
+
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
+
 	public Demande_creation() {
 		super();
 		// TODO Auto-generated constructor stub

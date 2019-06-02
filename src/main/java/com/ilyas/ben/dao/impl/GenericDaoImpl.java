@@ -45,14 +45,14 @@ public class GenericDaoImpl<E> implements IGenericdao<E>{
 
 	@Override
 	public List<E> selectAll() {
-		Query query=em.createQuery("select t from"+type.getSimpleName()+"t");
+		Query query=em.createQuery("select t from "+type.getSimpleName()+" t ");
 		return query.getResultList();
 		
 	}
 
 	@Override
 	public List<E> selectAll(String sortField, String sort) {
-		Query query=em.createQuery("select t from"+type.getSimpleName()+"t order by"+sortField+" "+sort);
+		Query query=em.createQuery("select t from "+type.getSimpleName()+" t order by "+sortField+" "+sort);
 		return query.getResultList();
 	}
 
@@ -70,7 +70,7 @@ public class GenericDaoImpl<E> implements IGenericdao<E>{
 
 	@Override
 	public E findOne(String paramName, Object paramValue) {
-		Query query=em.createQuery("select t from"+type.getSimpleName()+"t where"+paramName+"= :x");
+		Query query=em.createQuery("select t from "+type.getSimpleName()+" t where "+paramName+"= :x");
 		query.setParameter(paramName,paramValue); 
 		return query.getResultList().size()>0 ? (E) query.getResultList().get(0) : null;
 	}
@@ -80,7 +80,7 @@ public class GenericDaoImpl<E> implements IGenericdao<E>{
 		if (paramNames.length != paramValues.length){
 			return null;
 			}
-			String queryString="select e from"+type.getSimpleName()+"e where";
+			String queryString="select e from "+type.getSimpleName()+" e where ";
 			int len=paramNames.length;
 			for(int i=0;i<len;i++){
 			queryString+="e."+paramNames[i]+"= :x"+i;
@@ -97,7 +97,7 @@ public class GenericDaoImpl<E> implements IGenericdao<E>{
 
 	@Override
 	public int findCountBy(String paramName, Object paramValue) {
-		Query query=em.createQuery("select from "+type.getSimpleName()+"t where" +paramName+" = :x");
+		Query query=em.createQuery("select from "+type.getSimpleName()+" t where " +paramName+" = :x");
 				query.setParameter(paramName,paramValue);
 			return query.getResultList().size()>0 ? ((Long) query.getSingleResult()).intValue() : 0;
 	}		

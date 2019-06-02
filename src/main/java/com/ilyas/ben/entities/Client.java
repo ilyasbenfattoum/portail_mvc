@@ -15,9 +15,34 @@ public class Client extends Personne implements Serializable{
 	@Id
 	@GeneratedValue
 	private Long id_client;
-	
 	private String adresse_client;
+	public String getVille() {
+		return ville;
+	}
+
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
+
+	public String getPays() {
+		return pays;
+	}
+
+	public void setPays(String pays) {
+		this.pays = pays;
+	}
+
+	private String ville;
+	private String pays;
 	
+	public List<Demande_creation> getDemande_creation() {
+		return demande_creation;
+	}
+
+	public List<Demande_modification> getDemande_modification() {
+		return demande_modification;
+	}
+
 	@OneToMany
 	private List<Demande_creation> demande_creation;
 
@@ -29,10 +54,12 @@ public class Client extends Personne implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Client(Long id_client, String nom_prenom, String password, String adresse_client) {
-		super(nom_prenom, password);
+	public Client(Long id_client, String nom_prenom, String password,String email, String adresse_client,String ville,String pays) {
+		super(nom_prenom, password,email);
 		this.id_client = id_client;
 		this.adresse_client = adresse_client;
+		this.ville=ville;
+		this.pays=pays;
 	}
 
 	public String getAdresse_client() {

@@ -12,16 +12,28 @@ public class Personne {
 	
 	protected String password;
 	
+	protected String email;
 	
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
 	public Personne() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 
-	public Personne(String nom_prenom, String password) {
+	public Personne(String nom_prenom, String password,String email) {
 		this.nom_prenom = nom_prenom;
 		this.password = password;
+		this.email=email;
 	}
 
 
