@@ -1,3 +1,12 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="f"%>
+<%@ page session="true" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ page session="true" %>
+<%@ page trimDirectiveWhitespaces="true" %>
+<% String locale ="fr_FR" ; %>
+<fmt:setLocale value="${locale }"/>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -36,38 +45,46 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
               </div>
-              <form class="user">
+              <c:url value="/register/enregistrer" var="urlEnregistrer" />
+              <f:form modelAttribute="register" action="${urlEnregistrer }"  method="POST" role="form" class="user" >
+  
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
+                    <f:input path="nom_prenom" type="text" class="form-control form-control-user"  placeholder="Name" />
                   </div>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
-                  </div>
+                 
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
+                  <f:input path="email" type="email" class="form-control form-control-user"  placeholder="Email Address" />
                 </div>
 				<div class="form-group">
-                  <input type="adresse" class="form-control form-control-user" id="exampleInputadresse" placeholder="Address">
+                  <f:input path="adresse_client" type="adresse" class="form-control form-control-user"  placeholder="Address" />
                 </div>
+                
+                  <div class="form-group">
+                    <f:input path="password" type="password" class="form-control form-control-user"  placeholder="Password" />
+                  </div>
+                 
+               
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                    <f:input path="ville" type="text" class="form-control form-control-user"  placeholder="Ville" />
                   </div>
                   <div class="col-sm-6">
-                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
+                    <f:input path="pays" type="text" class="form-control form-control-user"  placeholder="Country" />
                   </div>
                 </div>
-                <a href="<%=request.getContextPath() %>/login/" class="btn btn-primary btn-user btn-block">
+                <div class="panel-footer">
+                <button  type="submit" class="btn btn-primary btn-user btn-block">
                   Register Account
-                </a>
+                </button>
+                </div>
                 <hr>
-              </form>
+              </f:form>
               <hr>
               
               <div class="text-center">
-                <a class="small" href="<%=request.getContextPath() %>/login/">Already have an account? Login!</a>
+                <a class="small"  href="<%=request.getContextPath() %>/login/">Already have an account? Login!</a>
               </div>
             </div>
           </div>

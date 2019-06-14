@@ -1,3 +1,11 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="f"%>
+<%@ page session="true" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ page session="true" %>
+<%@ page trimDirectiveWhitespaces="true" %>
+<% String locale ="fr_FR" ; %>
+<fmt:setLocale value="${locale }"/>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -202,77 +210,44 @@
                   <p class="card-category">Complete your profile</p>
                 </div>
                 <div class="card-body">
-                  <form>
-                    <div class="row">
-                      <div class="col-md-5">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Company </label>
-                          <input type="text" class="form-control" disabled>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Username</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Email address</label>
-                          <input type="email" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Fist Name</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Last Name</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Adress</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">City</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Country</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Postal Code</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
-                    <div class="clearfix"></div>
-                  </form>
+                <c:url value="/profile/update" var="urlEnregistrer" />
+              <f:form modelAttribute="update" action="${urlEnregistrer }"  method="POST" role="form" class="user" >
+  
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <f:input path="nom_prenom" type="text" class="form-control form-control-user"  placeholder="Name" />
+                  </div>
+                 
+                </div>
+                <div class="form-group">
+                  <f:input path="email" type="email" class="form-control form-control-user"  placeholder="Email Address" />
+                </div>
+				<div class="form-group">
+                  <f:input path="adresse_client" type="adresse" class="form-control form-control-user"  placeholder="Address" />
+                </div>
+                
+                  <div class="form-group">
+                    <f:input path="password" type="password" class="form-control form-control-user"  placeholder="Password" />
+                  </div>
+                 
+               
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <f:input path="ville" type="text" class="form-control form-control-user"  placeholder="Ville" />
+                  </div>
+                  <div class="col-sm-6">
+                    <f:input path="pays" type="text" class="form-control form-control-user"  placeholder="Country" />
+                  </div>
+                </div>
+                <div class="panel-footer">
+                <button  type="submit" class="btn btn-primary btn-user btn-block">
+                  Update Account
+                </button>
+                </div>
+                <hr>
+                 
+                   
+                  </f:form>
                 </div>
               </div>
 
