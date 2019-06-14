@@ -16,14 +16,23 @@ public class Document implements Serializable{
 	private String date;
 	private String client;
 	private String description;
+	private String donneexml;
 
 	
+	public String getDonneexml() {
+		return donneexml;
+	}
+
+	public void setDonneexml(String donneexml) {
+		this.donneexml = donneexml;
+	}
+
 	public Document() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Document(Long id_document, String date, String client, String description) {
+	public Document(Long id_document, String date, String client, String description, String donnexml) {
 		super();
 		this.id_document = id_document;
 		this.date = date;
