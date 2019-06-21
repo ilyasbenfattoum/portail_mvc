@@ -35,6 +35,9 @@ public class Client extends Personne implements Serializable{
 	private String ville;
 	private String pays;
 	
+	@OneToMany(mappedBy="client")
+	List<Roles> roles;
+	
 	public List<Demande_creation> getDemande_creation() {
 		return demande_creation;
 	}
@@ -54,12 +57,22 @@ public class Client extends Personne implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Client(Long id_client, String nom_prenom, String password,String email, String adresse_client,String ville,String pays) {
+	public Client(String nom_prenom, String password,String email, String adresse_client,String ville,String pays) {
 		super(nom_prenom, password,email);
-		this.id_client = id_client;
+		
 		this.adresse_client = adresse_client;
 		this.ville=ville;
 		this.pays=pays;
+	}
+	
+
+	public Client(Long id_client,String nom_prenom, String password, String email,  String adresse_client, String ville,
+			String pays) {
+		super(nom_prenom, password, email);
+		this.id_client = id_client;
+		this.adresse_client = adresse_client;
+		this.ville = ville;
+		this.pays = pays;
 	}
 
 	public String getAdresse_client() {

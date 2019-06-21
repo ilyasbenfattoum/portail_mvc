@@ -103,7 +103,13 @@
                     <td> ${demande_modif.getAdresse_client() } </td>
                     <td> ${demande_modif.getVille() } </td>
                     <td> ${demande_modif.getPays() } </td>
-                    <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
+                    <td class="td-actions">
+                    <a href="<%=request.getContextPath() %>/modification-requestadmin/update/${demande_modif.getId_demandem()}" class="btn btn-small btn-success">
+                    <i class="btn-icon-only icon-ok"> </i>
+                    </a>
+                    <a href="<%=request.getContextPath() %>/modification-requestadmin/delete/${demande_modif.getId_demandem()}" class="btn btn-danger btn-small">
+                    <i class="btn-icon-only icon-remove"> </i>
+                    </a></td>
                   </tr>
 				  </c:forEach>
 				</tbody>

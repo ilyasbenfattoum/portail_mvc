@@ -102,7 +102,15 @@
                     <td> ${demandescre.getAdresse_client() } </td>
                     <td> ${demandescre.getVille() } </td>
                     <td> ${demandescre.getPays() } </td>
-                    <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
+                    <td class="td-actions">
+                    <a href="<%=request.getContextPath() %>/clientadmin/save/${demandescre.getId_demandec()}" class="btn btn-small btn-success">
+                    <i class="btn-icon-only icon-ok"> </i>
+                    </a>
+                    <a href="<%=request.getContextPath() %>/clientadmin/delete/${demandescre.getId_demandec()}" class="btn btn-danger btn-small">
+                    <i class="btn-icon-only icon-remove">
+                     </i>
+                     </a>
+                    </td>
                   </tr>
 				   </c:forEach>
                 
