@@ -162,7 +162,7 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Youssef Balouki</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->
@@ -199,7 +199,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total factures</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">40 </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">2 </div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
@@ -214,7 +214,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Nombre des avoirs</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">40</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
                     </div>
 
                     <div class="col-auto">
@@ -230,7 +230,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Nombre des demandes</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">40</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">2</div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>

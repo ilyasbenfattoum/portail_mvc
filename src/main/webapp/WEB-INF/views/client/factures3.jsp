@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,11 +12,13 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="<%=request.getContextPath() %>/resources/clientresources/css/sb-admin-2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/clientresources/css/style.css" media="all" />
 </head>
+
 <body id="page-top">
   <!-- Page Wrapper -->
   <div id="wrapper">
-    <!-- Sidebar -->
+      <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<%=request.getContextPath() %>/index/">
@@ -182,14 +184,103 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
-		  <center><h1><font color="#4e73df"></font></h1></center>
-		   <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Settings</h1>
-		</div>
+      <center>  </center> <div class="container-fluid">
+		 <!-- Content Row -->
+		
+          <div class="row"> <center>
+		  <div class="col-xl-8 col-lg-7"></center>
+              <!-- Area Chart -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3 d-sm-flex align-items-center justify-content-between mb-4">
+                <center><h6 class="m-0 font-weight-bold text-primary">Avoir</h6></center>
+				<a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Download document</a>
+                </div> 
+				
+       <div class="card-body">
+      <header class="clearfix">    
+      <h1> Doc No.2019-06-16 </h1>
+      <div id="company" class="clearfix">
+        <div>Company-France</div>
+        <div>123 Rue de france,<br /> 75000 Paris, France</div>
+        <div>(602) 519-0450</div>
+        <div><a href="">compFrance@company.com</a></div>
+      </div>
+      <div id="project">
+     <div><span>PROJECT</span> Company-France </div>
+        <div><span>CLIENT</span> Youssef Balouki</div>
+        <div><span>CLIENT NO </span> 409</div>
+        <div><span>REF DOC</span> 2019-06-16  </div>
+        <div><span>EMAIL</span> <a href="">youssefbalouki@gmail.com</a></div>
+        <div><span>DATE</span> 16/06/2019</div>
+        <div><span>DUE DATE</span> 20/06/2019</div>
+      </div>
+    </header>
+      <main>
+      <table>
+        <thead>
+          <tr>
+            <th class="service">No Product</th>
+            <th class="desc">DESCRIPTION</th>
+            <th>QTY</th>
+            <th>PU TTC</th>
+            <th>REMISE</th>
+            <th>TOTAL TTC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="service">102</td>
+            <td class="desc">Description product</td>
+            <td class="qty">0</td>
+            <td class="unit">$40.00</td>
+            <td class="unit">05%</td>
+            <td class="total">$0,000.00</td>
+          </tr>
+           <tr>
+            <td class="service">107</td>
+            <td class="desc">Description product</td>
+            <td class="qty">0</td>
+            <td class="unit">$80.00</td>
+            <td class="unit">05%</td>
+            <td class="total">$0,000.00</td>
+          </tr>
+           <tr>
+            <td class="service">100</td>
+            <td class="desc">Description product</td>
+            <td class="qty">-1</td>
+            <td class="unit">$40.00</td>
+            <td class="unit">08%</td>
+            <td class="total">$-1,000.00</td>
+          </tr>
+          </tr>
+          <tr>
+            <td colspan="5">SUBTOTAL</td>
+            <td class="total">$-1,000.00</td>
+          </tr>
+          <tr>
+            <td colspan="5">TAX 25%</td>
+            <td class="total">$1,300.00</td>
+          </tr>
+          <tr>
+            <td colspan="5" class="grand total">GRAND TOTAL</td>
+            <td class="grand total">$-1,000.00</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div id="notices">
+        <div>We thank you for your trust</div>
+        <div>NOTICE:</div>
+        <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+      </div>
+    </main>	
+                  <hr>
+                </div> 
+              </div>
+          <center>  </center></div>
+          </div>
         </div>
         <!-- /.container-fluid -->
-      </div>
       </div>
       <!-- End of Main Content -->
  </div>
@@ -226,21 +317,21 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="<%=request.getContextPath() %>/resources/vendor/jquery/jquery.min.js"></script>
-  <script src="<%=request.getContextPath() %>/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<%=request.getContextPath() %>/resources/clientresources/vendor/jquery/jquery.min.js"></script>
+  <script src="<%=request.getContextPath() %>/resources/clientresources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="<%=request.getContextPath() %>/resources/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="<%=request.getContextPath() %>/resources/clientresources/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="<%=request.getContextPath() %>/resources/js/sb-admin-2.min.js"></script>
+  <script src="<%=request.getContextPath() %>/resources/clientresources/js/sb-admin-2.min.js"></script>
   <!-- Page level plugins -->
-  <script src="<%=request.getContextPath() %>/resources/vendor/chart.js/Chart.min.js"></script>
+  <script src="<%=request.getContextPath() %>/resources/clientresources/vendor/chart.js/Chart.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="<%=request.getContextPath() %>/resources/js/demo/chart-area-demo.js"></script>
-  <script src="<%=request.getContextPath() %>/resources/js/demo/chart-pie-demo.js"></script>
-  <script src="<%=request.getContextPath() %>/resources/js/demo/chart-bar-demo.js"></script>
+  <script src="<%=request.getContextPath() %>/resources/clientresources/js/demo/chart-area-demo.js"></script>
+  <script src="<%=request.getContextPath() %>/resources/clientresources/js/demo/chart-pie-demo.js"></script>
+  <script src="<%=request.getContextPath() %>/resources/clientresources/js/demo/chart-bar-demo.js"></script>
 
 
 </body>

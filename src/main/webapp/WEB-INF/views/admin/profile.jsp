@@ -61,7 +61,7 @@
 						
 						<ul class="dropdown-menu">
 							<li><a href="javascript:;">Profile</a></li>
-							<li><a href="javascript:;">Logout</a></li>
+							<li><a href="<%=request.getContextPath() %>/login/">Logout</a></li>
 						</ul>						
 					</li>
 				</ul>
@@ -143,7 +143,7 @@
 										<div class="control-group">											
 											<label class="control-label" for="firstname">First Name</label>
 											<div class="controls">
-												<input type="text" class="span6" id="firstname" value="John">
+												<input type="text" class="span6" id="firstname" >
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										
@@ -151,7 +151,7 @@
 										<div class="control-group">											
 											<label class="control-label" for="lastname">Last Name</label>
 											<div class="controls">
-												<input type="text" class="span6" id="lastname" value="Donga">
+												<input type="text" class="span6" id="lastname" >
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										
@@ -159,7 +159,7 @@
 										<div class="control-group">											
 											<label class="control-label" for="email">Email Address</label>
 											<div class="controls">
-												<input type="text" class="span4" id="email" value="john.donga@egrappler.com">
+												<input type="text" class="span4" id="email" >
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										
@@ -169,7 +169,7 @@
 										<div class="control-group">											
 											<label class="control-label" for="password1">Password</label>
 											<div class="controls">
-												<input type="password" class="span4" id="password1" value="thisispassword">
+												<input type="password" class="span4" id="password1" >
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 										
@@ -177,7 +177,7 @@
 										<div class="control-group">											
 											<label class="control-label" for="password2">Confirm</label>
 											<div class="controls">
-												<input type="password" class="span4" id="password2" value="thisispassword">
+												<input type="password" class="span4" id="password2" >
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
 																			

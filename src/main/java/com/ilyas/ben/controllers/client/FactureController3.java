@@ -4,13 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(value="/factures/1")
-public class FactureController {
+@RequestMapping(value="/factures/3")
+public class FactureController3 {
 	
 	@RequestMapping(value ="/")
 	public String home() {
-		
-		return "client/factures1";
+		return "client/factures3";
 	}
 	
 }

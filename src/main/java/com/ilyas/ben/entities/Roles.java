@@ -1,6 +1,7 @@
 package com.ilyas.ben.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -8,6 +9,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Roles {
 	@Id
+	@GeneratedValue
 	private Long idRole;
 	private String Rolename;
 	@ManyToOne
